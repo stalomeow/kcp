@@ -1304,3 +1304,20 @@ IUINT32 ikcp_getconv(const void *ptr)
 }
 
 
+void ikcp_setlogmask(ikcpcb *kcp, int logmask)
+{
+	kcp->logmask = logmask;
+}
+
+
+void ikcp_setwritelog(ikcpcb *kcp, void (*writelog)(const char *log, struct IKCPCB *kcp, void *user))
+{
+	kcp->writelog = writelog;
+}
+
+
+IINT32 ikcp_getrtt(const ikcpcb *kcp)
+{
+	return kcp->rx_srtt;
+}
+

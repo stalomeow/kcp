@@ -28,6 +28,9 @@ if(BUILD_SHARED_LIBS AND WIN32)
     ikcp_log
     ikcp_allocator
     ikcp_getconv
+    ikcp_setlogmask
+    ikcp_setwritelog
+    ikcp_getrtt
 ")
 
     file(WRITE "${exports_def_file}" "${exports_def_contents}")
